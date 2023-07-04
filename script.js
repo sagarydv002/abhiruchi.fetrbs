@@ -142,3 +142,35 @@ function initializeIntroductionSection() {
 document.addEventListener('DOMContentLoaded', function () {
     initializeIntroductionSection();
 });
+// JavaScript code for convenor section
+
+// Get the convenor details element
+var convenorDetails = document.querySelector('.convenor-details');
+
+// Convenor object with details
+var convenor = {
+  name: 'John Smith',
+  position: 'Convenor of Abhiruchi Society',
+  bio: 'John Smith is a passionate artist with a strong dedication to promoting art and creativity. He has been an active member of Abhiruchi Society for several years and has contributed immensely to its growth and success. With his creative vision and leadership skills, John continues to inspire and guide fellow artists in our society.'
+};
+
+// Function to update the convenor details
+function updateConvenorDetails() {
+  convenorDetails.innerHTML = `
+    <h3>${convenor.name}</h3>
+    <p>${convenor.position}</p>
+    <a href="convenor.html" class="btn-more">More Info</a>
+  `;
+}
+
+// Event listener for clicking "More Info" button
+convenorDetails.addEventListener('click', function(event) {
+  if (event.target.classList.contains('btn-more')) {
+    event.preventDefault();
+    // Navigate to the page with more information about the convenor
+    window.location.href = event.target.getAttribute('href');
+  }
+});
+
+// Update the convenor details on page load
+updateConvenorDetails();

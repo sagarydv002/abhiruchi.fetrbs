@@ -207,7 +207,19 @@ section {
 .convenor-details p {
     font-size: 16px;
 }
-
+.more-info-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff9800;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+  }
+  
+  .more-info-link:hover {
+    background-color: #ffab40;
+  }
+  
 .cabinet-members,
 .alumni-members {
     display: grid;
